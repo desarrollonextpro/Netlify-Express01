@@ -5,6 +5,7 @@ const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
 const router = express.Router();
+var productosRouter = require('./routes/productos');
 
 // Link to views folder.
 let views = path.join(__dirname, '../');
@@ -31,6 +32,7 @@ router.get('/page4', function(req, res){
 
 app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);  // path must route to lambda (express/server.js)
+app.use('/productos', productosRouter);
 
 module.exports = app;
 module.exports.handler = serverless(app);

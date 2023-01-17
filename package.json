@@ -32,6 +32,8 @@
     "netlify-lambda": "^0.4.0",
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
-    "serverless-http": "^1.6.0"
+    "pg": "^7.11.0",
+    "http-errors": "~1.6.3"
+
   }
 }
