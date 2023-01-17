@@ -29,6 +29,11 @@ router.get('/page4', function(req, res){
   res.sendFile('page4.html', { root: views });
 });
 
+router.get('/productos', function(req, res){
+  res.sendFile('productos.html', { root: views });
+});
+
+
 
 app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);  // path must route to lambda (express/server.js)
